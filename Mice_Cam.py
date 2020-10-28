@@ -11,7 +11,7 @@ import os
 #    for folder in folders:
 #        if folder['title'] == folderName:
 #            for i in range(2):
-#                filepath = r'' %i # Dateipfad für den Upload
+#               filepath = r'' %i # Dateipfad für den Upload
 #                filename = 'testfile%i.jpg' %i
 #                file1 = drive.CreateFile({'title': file_name , 'parents': [{'id': folder['id']}]})  # Create GoogleDriveFile instance with title 'Hello.txt'.
 #                file1.SetContentFile(file_path) # Set content of the file from given string.
