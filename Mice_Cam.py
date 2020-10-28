@@ -1,3 +1,4 @@
+# coding = utf-8
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 from picamera import PiCamera
