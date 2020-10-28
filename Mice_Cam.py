@@ -11,8 +11,8 @@ import os
 #    for folder in folders:
 #        if folder['title'] == folderName:
 #            for i in range(2):
-
-#                file_name = 'testfile%i.jpg' %i
+#                filepath = r'' %i # Dateipfad für den Upload
+#                filename = 'testfile%i.jpg' %i
 #                file1 = drive.CreateFile({'title': file_name , 'parents': [{'id': folder['id']}]})  # Create GoogleDriveFile instance with title 'Hello.txt'.
 #                file1.SetContentFile(file_path) # Set content of the file from given string.
 #                file1.Upload()
@@ -49,24 +49,24 @@ sleep(10)
 camera.awb_mode = 'auto'
 sleep(5)
 camera.capture('/media/pi/Documents/TestPictures/auto.jpg')
-file_path1 = r'/media/pi/Documents/TestPictures/auto.jpg' # Dateipfad für den Upload
-file_name1 = 'auto.jpg'
+filepath1 = r'/media/pi/Documents/TestPictures/auto.jpg' # Dateipfad für den Upload
+filename1 = 'auto.jpg'
 
 camera.awb_mode = 'shade'
 sleep(5)
 camera.capture('/media/pi/Documents/TestPictures/shade.jpg')
-file_path2 = r'/media/pi/Documents/TestPictures/shade.jpg' # Dateipfad für den Upload
-file_name2 = 'shade.jpg'
+filepath2 = r'/media/pi/Documents/TestPictures/shade.jpg' # Dateipfad für den Upload
+filename2 = 'shade.jpg'
 
 camera.awb_mode = 'cloudy'
 sleep(5)
 camera.capture('/media/pi/Documents/TestPictures/cloudy.jpg')
-file_path3 = r'/media/pi/Documents/TestPictures/cloudy.jpg' # Dateipfad für den Upload
-file_name3 = 'cloudy.jpg'
+filepath3 = r'/media/pi/Documents/TestPictures/cloudy.jpg' # Dateipfad für den Upload
+filename3 = 'cloudy.jpg'
 
-singleUpload(file_path1, file_name1)
-singleUpload(file_path2, file_name2)
-singleUpload(file_path3, file_name3)
+singleUpload(filepath1, filename1)
+singleUpload(filepath2, filename2)
+singleUpload(filepath3, filename3)
 
 
 
