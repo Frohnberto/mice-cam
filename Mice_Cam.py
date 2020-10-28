@@ -37,19 +37,19 @@ sleep(10)
 
 camera.awb_mode = 'auto'
 sleep(5)
-camera.capture('/media/pi/Documents/TestPictures/auto.jpg')
+camera.capture('/home/pi/Documents/TestPictures/auto.jpg')
 
 camera.awb_mode = 'shade'
 sleep(5)
-camera.capture('/media/pi/Documents/TestPictures/shade.jpg')
+camera.capture('/home/pi/Documents/TestPictures/shade.jpg')
 
 camera.awb_mode = 'cloudy'
 sleep(5)
-camera.capture('/media/pi/Documents/TestPictures/cloudy.jpg')
+camera.capture('/home/pi/Documents/TestPictures/cloudy.jpg')
 
-with open('/media/pi/Documents/TestPictures/cloudy.jpg' , "rb") as f:
+with open('/home/pi/Documents/TestPictures/cloudy.jpg' , "rb") as f:
     dbx.files_upload(f.read(), '/cloudy.jpg')
-with open('/media/pi/Documents/TestPictures/shade.jpg' , "rb") as f:
+with open('/home/pi/Documents/TestPictures/shade.jpg' , "rb") as f:
     dbx.files_upload(f.read(), '/shade.jpg')
-with open('/media/pi/Documents/TestPictures/auto.jpg' , "rb") as f:
+with open('/home/pi/Documents/TestPictures/auto.jpg' , "rb") as f:
     dbx.files_upload(f.read(), '/auto.jpg')
